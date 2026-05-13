@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Webpage Summarizer — Gemini",
+  "version": "1.0",
+  "description": "Summarize any webpage with Gemini AI",
+  "permissions": ["activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Summarize this page"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "https://backend-319512124676.us-central1.run.app/*"
+  ]
+}

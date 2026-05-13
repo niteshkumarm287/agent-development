@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body { width: 360px; min-height: 200px; font-family: sans-serif;
+           font-size: 13px; padding: 14px; color: #1a1a1a; }
+    h3   { margin: 0 0 10px; font-size: 14px; font-weight: 500; }
+    .modes  { display: flex; gap: 6px; margin-bottom: 12px; }
+    .mode   { padding: 4px 10px; border-radius: 999px; border: 1px solid #ddd;
+              cursor: pointer; font-size: 11px; background: #fff; }
+    .mode.active { background: #1a73e8; color: #fff; border-color: #1a73e8; }
+    #btn    { width: 100%; padding: 8px; background: #1a73e8; color: #fff;
+              border: none; border-radius: 6px; cursor: pointer; font-size: 13px; }
+    #btn:hover { background: #1558b0; }
+    #result { margin-top: 12px; line-height: 1.6; white-space: pre-wrap; }
+    #spinner { display: none; text-align: center; margin-top: 12px;
+               color: #888; font-size: 12px; }
+    #error  { color: #c00; margin-top: 8px; font-size: 12px; display: none; }
+  </style>
+</head>
+<body>
+  <h3>Summarize with Gemini</h3>
+  <div class="modes">
+    <button class="mode active" data-mode="summary">Summary</button>
+    <button class="mode" data-mode="bullets">Bullets</button>
+    <button class="mode" data-mode="eli5">ELI5</button>
+  </div>
+  <button id="btn">Summarize this page</button>
+  <div id="spinner">Generating summary...</div>
+  <div id="error"></div>
+  <div id="result"></div>
+  <script src="popup.js"></script>
+</body>
+</html>
