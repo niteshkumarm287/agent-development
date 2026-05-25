@@ -1,0 +1,8 @@
+name: sample-skill
+owner: nitesh
+last_reviewed: 2026-05-24
+tags:
+  - sre
+  - kubernetes
+compatible_apps:
+  - app-v1
